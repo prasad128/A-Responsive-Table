@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Table 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/table_css.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/model&table.css" />
+    <link rel="stylesheet" href="scripts/butn.css">
+    <script src="main.js"></script>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script> 
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+           .container-check input:indeterminate~.checkmark {
+  background: #00a4bd;
+}
+.container input:checked ~ .checkmark {
+    background-color: #00a4bd;
+}
+.container-check input:indeterminate~.checkmark:before {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  width: 80%;
+  height: 3px;
+  background: white;
+}
+
+
+/* Customize the label (the container) */
+
+.container-check {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 11px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+}
+
+.container-list ul {
+  list-style: none;
+  margin-left: -14px;
+}
+</style>
+<script>
+       document.addEventListener("DOMContentLoaded",function(){
+        $(document).ready(function() {
+
+var checkboxes = document.querySelectorAll('input.subOption'),
+  checkall = document.getElementById('option');
+
+for (var i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].onclick = function() {
+    var checkedCount = document.querySelectorAll('input.subOption:checked').length;
+
+    checkall.checked = checkedCount > 0;
+    checkall.indeterminate = checkedCount > 0 && checkedCount < checkboxes.length;
+  }
+}
+
+checkall.onclick = function() {
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = this.checked;
+  }
+}
+});
+       })
+</script>
+<script src="ckb.js" defer></script>
+</head>
+<body>
+        
+    <div class="container">
+        <table class="table" style="display: table;border-spacing: 2px;box-sizing: border-box;width: 982px;height: px; font-family: Avenir Next W02,Helvetica,Arial,sans-serif;font-weight: 400;font-size: 14px;color: #33475b;line-height: px;">
+            <colgroup>
+                <col width= "5%">
+                <col width= "30%">
+                <col width= "10%">
+                <col width= "40%">
+            </colgroup>
+            <thead>
+                    <tr  style="line-height: normal;font-weight: 500;height: 44px;padding:8px 24px 4px;vertical-align: middle; font-size: 12px;">
+                            <th style="background:	rgb(245,245,245);cursor:default; margin-left: 0px;vertical-align: middle;">
+                                   <!-- Default unchecked -->
+                                   <!--<input type="checkbox" name="" class="form-check-input" id="checkbox">
+                                   <label class="form-check-label" for="checkbox">
+                                      
+                                      
+                                   </label>-->
+                                   <label class="container-check" style=" margin-left: 7px;" for="option"><input id="option" type="checkbox"><span style="margin-top:-5px;" class="checkmark"></span>
+                                   </label>
+                                   <!--<input type="checkbox" name="short" id="short">
+                                   <label for="short"></label>-->
+                                   <!--<label class="container" style=" margin-left: 10px;" >
+                                    <input type="checkbox" name="checkedAll" data-group="1" class="selectall">
+                                    <span style="margin-top:-6px;" class="checkmark"></span>
+                                </label>-->
+                            </th>
+                            
+                            <th class="hoverN" style="background:rgba(0,73,146,.0823529);color:#33475b;font-weight: 500;font-size: 12px; font-family: Avenir Next W02,Helvetica,Arial,sans-serif;"><span><b>NAME</b></span></th>
+                            <th class="hoverH" style="background:rgba(0,77,128,.0392157);color:#33475b;font-weight: 500;"><span ><b>TEAM</b></span> </th>
+                            <th class="hoverH" style="background:rgba(0,77,128,.0392157);color:#33475b;font-weight: 500;"><span ><b>ACCESS</b></span></th>
+                    </tr>
+            </thead>
+            <tbody style="display:table-row-group; vertical-align:middle;border-collapse: collapse;">
+                <tr class="hover">
+                       <td style="cursor:default;">
+                            <label id="ckb1" class="container-check">
+                            <input class="subOption" type="checkbox">
+                            <span  style="margin-top: 10px;margin-left:8px;" class="checkmark"></span>
+                            </label>
+                            <!--<label class="container">
+                                <input type="checkbox" name="checkAll" data-group="1" class="child">
+                                <span style="margin:10px;margin-top:14px;" class="checkmark"></span>
+                            </label>-->
+                    
+                       </td>
+                       <td style="line-height:0.6rem;">
+                        <div style="margin-top:10px; color:#007a8c;">
+                            <p style="margin-top: px;"><!--<div tabindex="0" style="height: 32px; width: 32px; display: inline-block; text-align: center;" class="tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center">-->
+                                <img alt=""  src="https://api.hubapi.com/hubsettings/v1/avatar/hash/cd664258eaa91fd3a4999521d926e249/64" style="height:32px;width:32px;margin-right: 12px;margin-top: -2px;">
+                    
+                                <span>
+                                        <a href="#myModal2" role="link" style="padding:0 0px;color: #0091ae; line-height: 0.6rem; " data-toggle="modal" data-target="#myModal2">
+                                              <span><b>James Broad </b></span>
+                                        </a>
+                                </span><br><br><span style="color: #7c98b6!important;">jamesbroad007@yahoo.com</span>
+                            </p>
+                        </div> 
+                        
+                       </td>
+                       <td data-toggle="modal" data-target="#myModal2"></td>
+                       <td>
+                        <div class="container demo" style="margin-top:8px;margin-left:-15px;border-radius: 0px;">
+                            <!--<span class="tag private-tag tag-default private-tag--disabled private-tag--default" data-component-name="UITag" id="Tag1" data-test-access-level="Service"><span class="private-tag__flex-wrapper"><span class="private-tag__content-wrapper"><span class="private-truncated-string private-truncated-string--is-flex tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center" tabindex="0"><span class="private-truncated-string__inner"><span>Service</span></span></span></span></span></span>-->
+            
+                                                               
+                                                            
+                            <button type="button" style="padding:0 8px; background-color:#eaf0f6;border-color:#cbd6e2;border-radius: 0px;" class="btn" data-toggle="modal" data-target="#myModal2">
+                                        <span style="line-height:22px;color:#33475b; font-size:12px;font-weight:600px;"><b>Services</b></span>
+                            </button>
+
+                            <button type="button" style="padding:0 8px; background-color:#eaf0f6;border-color:#cbd6e2;border-radius: 0px;" class="btn" data-toggle="modal" data-target="#myModal2">
+                                <span style="line-height:22px;color:#33475b; font-size:12px;font-weight:600px;"><b>Contacts</b></span>
+                            </button>
+
+                            <button type="button" style="padding:0 8px; background-color:#eaf0f6;border-color:#cbd6e2;border-radius: 0px;" class="btn" data-toggle="modal" data-target="#myModal2">
+                                <span style="line-height:22px;color:#33475b; font-size:12px;font-weight:600px;"><b>Sales</b></span>
+                            </button>
+                        
+                            <button type="button" style="padding:0 8px; background-color:#eaf0f6;border-color:#cbd6e2;border-radius: 0px;" class="btn" data-toggle="modal" data-target="#myModal2">
+                                <span style="line-height:22px;color:#33475b; font-size:12px;font-weight:600px;"><b>Marketing</b></span>
+                            </button>
+                        </div> 
+                       </td>
+                </tr>
+                <tr class="hover" >
+                    <td style="cursor:default;">
+                        
+                        <label id="ckb2" class="container-check">
+                            <input class="subOption" type="checkbox">
+                            <span  style="margin-top: 10px;margin-left:8px;" class="checkmark"></span>
+                        </label>
+                        <!--<label class="container">
+                             <input type="checkbox" name="checkAll" data-group= "1" class="child">
+                             <span style="margin:10px;margin-top:14px;" class="checkmark"></span>
+                         </label>-->
+                 
+                    </td>
+                    <td  style="line-height:0.6rem;">
+                     <div style="margin-top:10px;color:  #007a8c;">
+                         <p style="margin-top: px;"><!--<div tabindex="0" style="height: 32px; width: 32px; display: inline-block; text-align: center;" class="tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center">-->
+                             <img alt=""  src="https://api.hubapi.com/hubsettings/v1/avatar/hash/cd664258eaa91fd3a4999521d926e249/64" style="height:32px;width:32px;margin-right: 12px;margin-top: -2px;">
+                 
+                             <span >
+                                    <a href="#myModalS" role="link" style="padding:0 0px;color:  #0091ae; line-height: 0.6rem; " data-toggle="modal" data-target="#myModalS">
+                                            <span><b>Joseph Peter</b></span>
+                                    </a>
+                            </span><br><br><span style="color: #7c98b6!important;">josephpeters@yahoo.com</span>
+                         </p>
+                     </div> 
+                     
+                    </td>
+                    <td data-toggle="modal" data-target="#myModalS"></td>
+                    <td >
+                     <div class="container demo" style="margin-top:8px;margin-left:-15px;">
+                         <!--<span class="tag private-tag tag-default private-tag--disabled private-tag--default" data-component-name="UITag" id="Tag1" data-test-access-level="Service"><span class="private-tag__flex-wrapper"><span class="private-tag__content-wrapper"><span class="private-truncated-string private-truncated-string--is-flex tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center" tabindex="0"><span class="private-truncated-string__inner"><span>Service</span></span></span></span></span></span>-->
+         
+                                                            
+                                                         
+                         <button type="button" style="padding:0 8px; background-color:#eaf0f6;border-color:#cbd6e2;border-radius: 0px;" class="btn" data-toggle="modal" data-target="#myModalS">
+                                     <span style="line-height:22px;color:#33475b; font-size:12px;font-weight:600px;"><b>Super Admin</b></span>
+                         </button>
+
+                         
+                     </div> 
+                    </td>
+             </tr>
+            </tbody>
+
+        </table>
+        <!-- Modal -->
+        <div style="width:700px; overflow: auto;border-radius: 0px;" class="modal right fade " id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                <div class="modal-dialog modal-lg" role="document" style="width:700px;border-radius: 0px;">
+                    <div class="modal-content" style="border-radius: 0px;">
+        
+                        <div class="modal-header sticky-top" style="height: 68px;border-radius: 0px; background-color: #00bda5;">
+                            
+                            
+                            <!--<h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>-->
+                            <h5 style=" margin-left: 25px; margin-top:7px; margin-bottom: 140px;"><button id="btn1" style="margin-bottom: 20px; margin-left: 466px; line-height: 0.5rem; padding-top: 21px; color: #ffffff;" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><span><strong>James Broad</strong></span> </h5>
+                        </div>
+                        
+                            
+                        <div class="container" id="modal-body" style="overflow: auto; height:100%;">
+                                    <table class="model-second" style="width: 100%; border:#fff;">
+                                                <!--<col width="100">
+                                                <col width="450">-->
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <br>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>    
+                                                        <td style="line-height: 8px; margin-left: 8px; padding-top: 5px;">
+                                                                <p style="margin-top: 13px; margin-right: 0px; padding-left: 12px;"><!--<div tabindex="0" style="height: 32px; width: 32px; display: inline-block; text-align: center;" class="tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center">-->
+                                                                                <img alt=""  src="https://api.hubapi.com/hubsettings/v1/avatar/hash/cd664258eaa91fd3a4999521d926e249/64" style="height: 72px; width: 72px; display: inline-block; text-align: center; margin-top: -10px;">
+                                                                    
+                                                                    <span style="margin-left: 10px; margin-top: 0px; padding: 3px;font-family: Avenir Next W02,Helvetica,Arial,sans-serif; color:#495057; font-size: 24px;">James Broad </span><span style="font-size: 10px; margin-left: 25px; margin-bottom: 20px; padding: 0px; color: #7c98b6;">
+                                                                        <div class="dropdown show" style="margin-left:15px; font-size: 12px; margin-bottom: 20px;">
+                                                                            <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 20px;color: #0091ae; margin-left:13px; margin-top: -7px; font-size: 14px;">
+                                                                              No teams assigned
+                                                                            </a>
+                                                                          
+                                                                            <div class="dropdown-menu" style="line-height: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                                                                              <a class="dropdown-item" style="background-color:rgba(0,157,186,.101961);" href="#">No Team assigned</a>
+                                                                              <a class="dropdown-item" href="#"><a style="margin-left: 45px; color:#0091ae;" href=""> Create Team </a></a>
+                                                                              
+                                                                            </div>
+                                                                            <!--<div id="lk" class="dropdown-menu" style="line-height: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                                                                                    <a class="dropdown-item" href="#">No Team assigned</a>
+                                                                                    
+                                                                                    
+                                                                                  </div>-->
+                                                                        </div>
+                                                                    </span>
+                                                                </p> 
+                                                                
+                                                        </td>
+                                                        <!--<td><img src="img1.png" alt="Avatar" style="width:80px;border-radius:50%;"></td>
+                                                        <td><h3>Mukesh Sahu</h3></td>-->
+                                                        <td><div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle" style="color: #506e91;border-radius: 0px; margin-bottom: 35px;border-color:#cbd6e2; background-color:#eaf0f6; margin-left: -50px; padding-left: 13px; padding-right: 13px;font-size: 12px;" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </a>
+                                                                <div class="dropdown-menu" style="line-height: 2rem;" aria-labelledby="dropdownMenuLink">
+                                                                  <!--<a class="dropdown-item" href="#myModalM">Make Super admin</a>-->
+                                                                  <a class="dropdown-item" role="link" data-toggle="modal" data-target="#myModalM" href="#myModalM">Make Super admin</a>
+                                                                  <a class="dropdown-item" href="">Reset Password</a>
+                                                                  <a class="dropdown-item" role="link" data-toggle="modal" data-target="#exampleModal" href="#">Remove Super User</a>
+                                                              </div></td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                   
+                                    <div class="container">
+                                        <div class="container" style="margin: -5px; margin-top:14px;">
+                                            <nav style="font-size: 14px; color:#495057; background-color: #f5f8fa;">
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                  <a style="padding:12px 28px;color:#495057;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Contacts</a>
+                                                  <a style="padding:12px 28px;color:#495057;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Marketing</a>
+                                                  <a style="padding:12px 28px;color:#495057;" class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Sales</a>
+                                                  <a style="padding:12px 28px;color:#495057;" class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#nav-service" role="tab" aria-controls="nav-service" aria-selected="false">Service</a>
+                                                  <a style="padding:12px 28px;color:#495057;" class="nav-item nav-link" id="nav-admin-tab" data-toggle="tab" href="#nav-admin" role="tab" aria-controls="nav-admin" aria-selected="false">Admin</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                    <br>
+                                                    <p style="font-size: 16px;"><b>Contact Access</b></p>
+                                                    <p style="font-size: 14px; margin-top: -13px;">All users have a basic level of access. The permissions below apply to contacts, companies, and tasks.</p>
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px;">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                  <col width="700px">
+                                                            </colgroup>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float:left; margin-left: 23px;">view</span>
+                                                                    <span style="float:right; margin-right: 8px;">
+                                                                        <div class="dropdown show">
+                                                                            <a class="btn btn-link dropdown-toggle" href="#" style="font-size:14px; color: #0091ae; " role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                              Everything
+                                                                            </a>
+                                                                      
+                                                                            <div style="line-height: 25px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                              <a class="dropdown-item" href="#">Everything</a>
+                                                                              <a class="dropdown-item" href="#">Team Only</a>
+                                                                              <a class="dropdown-item" href="#">Owned Only</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Communicate</span> 
+                                                                    <span style="float: right; margin-right: 8px;">
+                                                                        <div class="dropdown show">
+                                                                            <a class="btn btn-link dropdown-toggle" style="font-size:14px;color: #0091ae; " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                              Everything
+                                                                            </a>
+                                                                      
+                                                                            <div style="line-height: 25px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                              <a class="dropdown-item" href="#">Everything</a>
+                                                                              <a class="dropdown-item" href="#">Team Only</a>
+                                                                              <a class="dropdown-item" href="#">Owned Only</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Edit</span> 
+                                                                    <span style="float: right; margin-right: 8px;">
+                                                                        <div class="dropdown show">
+                                                                            <a class="btn btn-link dropdown-toggle" style="font-size:14px;color: #0091ae; " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                              Everything
+                                                                            </a>
+                                                                      
+                                                                            <div style="line-height: 25px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                              <a class="dropdown-item" href="#">Everything</a>
+                                                                              <a class="dropdown-item" href="#">Team Only</a>
+                                                                              <a class="dropdown-item" href="#">Owned Only</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                            
+                                                        </tbody>
+                                                    </table>
+                                                   
+                                                    <br>
+                                                    <p style="font-size:16px;"><b>CRM Settings Access</b></p>
+                                                    <p style="font-size:14px;margin-top: -13px;">The permissions below apply to contacts, companies, deals, and tickets.</p>
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px;">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                  <col width="700px">
+                                                            </colgroup>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float:left; margin-left: 23px;">Bulk delete</span>
+                                                                    <span style="float: right; margin-right: 8px;">
+                                                                        <label class="container" style="margin-top: 15px; margin-left: 10px;" >
+                                                                            <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                            <span style="background-color:#00a4bd;" class="checkmark"></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Import</span> 
+                                                                    <span style="float: right; margin-right: 8px;color:#00bda5;">
+                                                                        <label class="container" style="margin-top: 15px; margin-left: 10px;background-color:#00bda5;" >
+                                                                            <input type="checkbox" checked name="checkAll" class="checkSingle">
+                                                                            <span style="background-color:#00a4bd;" class="checkmark"></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Export</span> 
+                                                                    <span style="float: right; margin-right: 8px;">
+                                                                        <label class="container" style="margin-top: 15px; margin-left: 10px;" >
+                                                                            <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                            <span style="background-color:#00a4bd;" class="checkmark"></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Edit property settings</span>
+                                                                    <span style="float: right; margin-right: 8px;">
+                                                                        <label class="container" style="margin-top: 15px; margin-left: 10px;" >
+                                                                            <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                            <span style="background-color:#00a4bd;" class="checkmark"></span>
+                                                                        </label> 
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                    <br>
+                                                    <p style="font-size:16px;"><b>Marketing Access</b></p>
+                                                    <p style="font-size: 14px; margin-top: -13px;">Set permissions for access to and actions on marketing publishing tools.
+                                                    </p>
+                                                    <br>
+                                                    <p style="text-align: right; font-size:14px;"><span style="padding-right: 40px;">Publish</span><span style="padding-right: 40px;">amazon</span><span style="padding-right:19px;">flipkart</span></p>
+                                                    
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px; margin-top: 31px;">
+                                                            <tbody>
+                                                                <colgroup>
+                                                                      <col width="700px">
+                                                                </colgroup>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span style="float:left; margin-left: 23px;">Adds</span>
+                                                                        <span style="float:right; margin-right: 19px;">
+                                                                                <label class="container" style="margin-top: 7px;" >
+                                                                                        <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                        <span style="margin-top:15px;background-color:#00a4bd;" class="checkmark"></span>
+                                                                                </label>
+                                                                        </span>
+                                                                        <span style="float:right;">
+                                                                                <label class="container" style="margin-top: 7px; margin-left: 10px; margin-right: 145px;" >
+                                                                                            <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                            <span class="checkmark" style="margin-top:15px;background-color:#00a4bd;"></span>
+                                                                                </label>
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span style="float: left; margin-left: 23px;">Social publishing</span> 
+                                                                        <span style="float: right; margin-right: 8px;">
+                                                                            <div class="dropdown show">
+                                                                                <a class="btn btn-link dropdown-toggle" style="font-size:14px;color: #0091ae;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                  Their accounts only
+                                                                                </a>
+                                                                          
+                                                                                <div style="line-height: 25px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                  <a class="dropdown-item" href="#">Everything</a>
+                                                                                  <a class="dropdown-item" href="#">Team Only</a>
+                                                                                  <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </span>
+                                                                    </td>
+                                                                
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span style="float: left; margin-left: 23px;">Forms</span> 
+                                                                        <span style="float: right; margin-right: 19px;">
+                                                                                <label class="container" style="margin-top: 15px; margin-left: 10px;" >
+                                                                                        <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                        <span class="checkmark" style="margin-top:7px;background-color:#00a4bd;"></span>
+                                                                                </label>
+                                                                        </span>
+                                                                    </td>
+                                                                
+                                                                </tr>
+                                                
+                                                            </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                                    <br>
+                                                    <p style="font-size: 16px;"><b>Deals Access</b></p>
+                                                    <p style="font-size: 14px;margin-top:-13px;">Set permissions for access to Deals.</p>
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px;">
+                                                            <tbody>
+                                                                <colgroup>
+                                                                      <col width="700px">
+                                                                </colgroup>
+                                                                <tr style="line-height: 33px;">
+                                                                    <td>
+                                                                        <span style="float:left; margin-left: 23px; margin-top: 21px;">view</span>
+                                                                        <span style="float:right; margin-right: 3px;">
+                                                                            <div class="dropdown show" id="label" style="margin-top:4px; margin-bottom: -3px;">
+                                                                                <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" style="font-size:14px;padding-left: 20px; color: #0091ae;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                  Owned Only
+                                                                                </a>
+                                                                          
+                                                                                <div style="line-height: 25px; font-size: 14px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                  <a class="dropdown-item" href="#">Everything</a>
+                                                                                  <a class="dropdown-item" href="#">Team Only</a>
+                                                                                  <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                  
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div style="margin-bottom:10px;margin-right: 5px;" class="custom-control custom-checkbox">
+                                                                                <label class="container" style="margin-bottom: 10px; font-size: 14px;" >
+                                                                                    <input type="checkbox" name="checkAll" class="checkSingle"> Unassigned
+                                                                                    <span class="checkmark" style="margin-top:3px;background-color:#00a4bd; margin-left:-20px;"></span>
+                                                                                </label>
+                                                                                        <!--<input  type="checkbox" class="custom-control-input" id="check" style="background-color: #00bda5;" checked>
+                                                                                        <label style="line-height: 23px; float: left; font-size: 14px;" class="custom-control-label" for="check">Unassigned</label>-->
+                                                                            </div>
+                                                                        </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span style="float: left; margin-left: 23px;">Edit</span> 
+                                                                        <span style="float: right; margin-right: 8px;">
+                                                                            <div class="dropdown show">
+                                                                                <a class="btn btn-link dropdown-toggle" style="margin-bottom:3px;color:#0091ae;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                  None
+                                                                                </a>
+                                                                          
+                                                                                <div style="line-height: 25px; font-size: 14px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                  <a class="dropdown-item" href="#">Everything</a>
+                                                                                  <a class="dropdown-item" href="#">Team Only</a>
+                                                                                  <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                  <a class="dropdown-item" href="#">None</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </span>
+                                                                    </td>
+                                                                
+                                                                </tr>
+                                                
+                                                            </tbody>
+                                                        </table>
+                                                        <div style="margin-top:30px">
+                                                            <div style="float: left">
+                                                                <p style="font-size:16px;"><b>Sales Access</b></p>
+                                                                <p style="font-size: 14px;line-height:1px;">Set permissions for access to sales tools.</p>
+                                                            </div>
+                                                            <!--<div class="center">
+                                                                <input type="checkbox" id="cbx" style="display:none"/>
+                                                                <label for="cbx" class="toggle"><span></span></label>    
+                                                            </div>-->
+                                                            <div id="toggle-event" style="float:right;margin-top:6px; background-color: #0091ae;">
+                                                                    <input type="checkbox" style="background-color:#0091ae;" checked data-toggle="toggle" data-style="ios" data-size="large" data-width="70"> 
+                                                            </div>
+                                                            <!--<div id="toggle-event" style="float:right;margin-top:20px">
+                                                                    <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-size="large" data-width="70"> 
+                                                            </div>--> 
+                                                            
+                                                                                             
+                                                        </div>
+                                                        <div id="console-event">
+                                                        <table class="table-bordered" style="margin-top:110px;">
+                                                                <tbody>
+                                                                        <colgroup>
+                                                                            <col width="700px">
+                                                                      </colgroup>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span style="float:left; margin-left: 23px; margin-top:23px;font-size: 16px;"><b>Sales Professional</b></span>
+                                                                            <span style="float:right; margin-right: 3px;margin-top:17px; margin-bottom:19px">
+                                                                                    <button type="button" class="btn btn-default" style="font-size:12px; padding: 6px 12px;">learn More about Sales Professional</button>
+                                                                            </span>
+                                                                            </td>
+                                                                    </tr>
+                                                        
+                                                                 </tbody>
+                                                        </table>      
+                                                    </div>   
+                                                    
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
+                                                    <br>
+                                                    <p style="font-size: 16px;"><b>Tickets Access</b></p>
+                                                    <p style="font-size: 14px;margin-top:-13px;">Set permissions for access to Deals.</p>
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px;">
+                                                            <tbody>
+                                                                <colgroup>
+                                                                      <col width="700px">
+                                                                </colgroup>
+                                                                <tr style="line-height: 33px;">
+                                                                    <td>
+                                                                            <span style="float:left; margin-left: 23px; margin-top: 21px;">view</span>
+                                                                            <span style="float:right; margin-right: 3px;">
+                                                                                <div class="dropdown show" id="label" style="margin-top:4px; margin-bottom: -3px;">
+                                                                                    <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" style="font-size:14px;padding-left: 20px; color: #0091ae;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                      Owned Only
+                                                                                    </a>
+                                                                              
+                                                                                    <div style="line-height: 25px; font-size: 14px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                      <a class="dropdown-item" href="#">Everything</a>
+                                                                                      <a class="dropdown-item" href="#">Team Only</a>
+                                                                                      <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                      
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                                <div style="margin-bottom:10px;margin-right: 5px;" class="custom-control custom-checkbox">
+                                                                                    <label class="container" style="margin-bottom: 10px; font-size: 14px;" >
+                                                                                        <input type="checkbox" name="checkAll" class="checkSingle"> Unassigned
+                                                                                        <span class="checkmark" style="margin-top:3px;background-color:#00a4bd; margin-left:-20px;"></span>
+                                                                                    </label>
+                                                                                            <!--<input  type="checkbox" class="custom-control-input" id="check" style="background-color: #00bda5;" checked>
+                                                                                            <label style="line-height: 23px; float: left; font-size: 14px;" class="custom-control-label" for="check">Unassigned</label>-->
+                                                                                </div>
+                                                                            </span>
+                                                                        <!--<span style="float:left; margin-left: 23px; margin-top: 21px;">view</span>
+                                                                        <span style="float:right; margin-right: 3px;">
+                                                                            <div class="dropdown show" id="label" style="margin-top:4px; margin-bottom: -3px;">
+                                                                                <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" style="font-size:14px;color:#0091ae;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                  Everything
+                                                                                </a>
+                                                                          
+                                                                                <div style="line-height: 25px; font-size: 14px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                  <a class="dropdown-item" href="#">Everything</a>
+                                                                                  <a class="dropdown-item" href="#">Team Only</a>
+                                                                                  <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                  
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div style="margin-bottom:10px" class="custom-control custom-checkbox">
+                                                                                        <input type="checkbox" class="custom-control-input" id="check1" checked>
+                                                                                        <label style="line-height: 23px; float: left; font-size: 14px;" class="custom-control-label" for="check1">Unassigned</label>
+                                                                            </div>
+                                                                        </span>-->
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span style="float: left; margin-left: 23px;">Edit</span> 
+                                                                        <span style="float: right; margin-right: 8px;">
+                                                                            <div class="dropdown show">
+                                                                                <a class="btn btn-link dropdown-toggle" style="margin-bottom:3px;color:#0091ae;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                  None
+                                                                                </a>
+                                                                          
+                                                                                <div style="line-height: 25px; font-size: 14px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                  <a class="dropdown-item" href="#">Everything</a>
+                                                                                  <a class="dropdown-item" href="#">Team Only</a>
+                                                                                  <a class="dropdown-item" href="#">Owned Only</a>
+                                                                                  <a class="dropdown-item" href="#">None</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </span>
+                                                                    </td>
+                                                                
+                                                                </tr>
+                                                
+                                                            </tbody>
+                                                    </table>
+                                                    <div style="margin-top:45px;">
+                                                            <div style="float: left">
+                                                                <p style="font-size:16px;"><b>Service Hub Access</b></p>
+                                                                <p style="font-size: 14px;line-height:1px;">Set permissions for access to sales tools.</p>
+                                                            </div>
+                                                            
+                                                            <div id="toggle-event" style="float:right;margin-top:6px; background-color: #0091ae;">
+                                                                    <input type="checkbox" style="background-color:#0091ae;" checked data-toggle="toggle" data-style="ios" data-size="large" data-width="70"> 
+                                                            </div>
+                                                                                             
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <p style="text-align: right; font-size:14px;"><span style="padding-right: 40px;">Publish</span><span style="padding-right:19px;">flipkart</span></p>
+                                                    <table class="table-bordered" style="line-height:70px; font-size: 14px; margin-top: 31px;">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                  <col width="700px">
+                                                            </colgroup>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float:left; margin-left: 23px;">Customer feedback surveys</span>
+                                                                    <span style="float:right; margin-right: 19px;">
+                                                                            <label class="container" style="margin-top: 7px;" >
+                                                                                    <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                    <span style="margin-top:15px;" class="checkmark"></span>
+                                                                            </label>
+                                                                    </span>
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Knowledge base articles</span> 
+                                                                    <span style="float:right; margin-right: 19px;">
+                                                                        <label class="container" style="margin-top: 7px;" >
+                                                                                <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                <span style="margin-top:15px;" class="checkmark"></span>
+                                                                        </label>
+                                                                    </span>
+                                                                    <span style="float:right;">
+                                                                        <label class="container" style="margin-right:51px; margin-top: 7px;" >
+                                                                                    <input type="checkbox" name="checkAll">
+                                                                                    <span class="checkmark" style="margin-top:15px;"></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span style="float: left; margin-left: 23px;">Knowledge base settings</span> 
+                                                                    <span style="float: right; margin-right: 19px;">
+                                                                            <label class="container" style="margin-top: 15px; margin-left: 10px;" >
+                                                                                    <input type="checkbox" name="checkAll" class="checkSingle">
+                                                                                    <span class="checkmark" style="margin-top:7px;"></span>
+                                                                            </label>
+                                                                    </span>
+                                                                </td>
+                                                            
+                                                            </tr>
+                                            
+                                                        </tbody>
+                                                    </table>
+                                                    <div id="console-event">
+                                                        <table class="table-bordered" style="margin-top:30px;">
+                                                                <tbody>
+                                                                        <colgroup>
+                                                                            <col width="700px">
+                                                                      </colgroup>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span style="float:left; margin-left: 23px; margin-top:23px;font-size: 16px;"><b>Sales Professional</b></span>
+                                                                            <span style="float:right; margin-right: 3px;margin-top:17px; margin-bottom:19px">
+                                                                                    <button type="button" class="btn btn-default" style="font-size:12px; padding: 6px 12px;">learn More about Sales Professional</button>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                        
+                                                                 </tbody>
+                                                        </table>      
+                                                    </div> 
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-admin" role="tabpanel" aria-labelledby="nav-admin-tab">
+                                                    <br>
+                                                    <div style="margin-top:0px;">
+                                                        <div style="float: left">
+                                                            <p style="font-size:16px;"><b>Admin Access</b></p>
+                                                            <p style="font-size: 14px; margin-top: -13px;">Set permissions for access to sales tools.</p>
+                                                        </div>
+                                                        <div id="toggle-event" style="float:right;margin-top:6px;background-color:#00a4bd; border-color:#00a4bd;">
+                                                                <input style="background-color:#00a4bd; border-color:#00a4bd;" type="checkbox" checked data-toggle="toggle" data-style="ios" data-size="large" data-width="70"> 
+                                                        </div> 
+                                                                                         
+                                                    </div>
+                                                    <br>
+                                                    <br>
+
+
+
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                        </div>
+                        <div class="modal-footer" style="justify-content:flex-start; padding: 1.5rem;width: 100%;">
+                                
+                                <button type="button" style="background-color:#ff7a59; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary" style="color:#ff7a59;background-color: white; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" data-dismiss="modal">Cancel</button>
+                        </div>   
+                        
+                        
+                        
+                        
+                    </div><!-- modal-content -->
+                    
+                </div><!-- modal-dialog -->
+                
+        </div><!-- modal -->
+         <!-- Modal -->
+         <div style="width:0px;border-radius: 0px; overflow: auto;" class="modal right fade" id="myModalS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog modal-lg" role="document" style="width:700px;border-radius: 0px;">
+                <div class="modal-content" style="border-radius: 0px;">
+    
+                    <div class="modal-header" style="height:68px; border-radius: 0px;">
+                        <h4 class="modal-title" style="float: left;margin-right: -68px; font-family:Avenir Next W02,Helvetica,Arial,sans-serif; font-weight:700; margin-top:5px; font-size:20px; line-height: normal; margin-left: 21px;"><button style="line-height:1.5rem; font-size:2.5rem; float:right; color: white;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" >&times;</span>
+                          </button><span style="padding-right:456px; margin-right: 10px;"><b>Joseph Peter</b></span>
+                        </h4>
+                        
+                    </div>
+                    
+                        
+                    <div class="container" id="modal-body" >
+                                <table class="model-second" style="width: 100%; border:#fff;">
+                                            <!--<col width="100">
+                                            <col width="450">-->
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>    
+                                                    <td style="line-height: 8px; margin-left: 8px; padding-top: 5px;">
+                                                            <p style="margin-top: 13px; margin-right: 0px; padding-left: 12px;"><!--<div tabindex="0" style="height: 32px; width: 32px; display: inline-block; text-align: center;" class="tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center">-->
+                                                                            <img alt=""  src="https://api.hubapi.com/hubsettings/v1/avatar/hash/cd664258eaa91fd3a4999521d926e249/64" style="height: 72px; width: 72px; display: inline-block; text-align: center; margin-top: -10px;">
+                                                                
+                                                                <span style="margin-left: 10px; margin-top: 0px; padding: 3px; color:#495057; font-size: 24px;">joseph peter</span><span style="font-size: 10px; margin-left: 25px; margin-bottom: 20px; padding: 0px; color: #7c98b6;">
+                                                                    <div class="dropdown show" style="margin-left:15px; font-size: 12px; margin-bottom: 20px;">
+                                                                        <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 20px;color: #0091ae; margin-left:13px; margin-top: -7px; font-size: 14px;">
+                                                                          No teams assigned
+                                                                        </a>
+                                                                        <div class="dropdown-menu" style="line-height: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                                                                            <a class="dropdown-item" style="background-color:rgba(0,157,186,.101961);" href="#">No Team assigned</a>
+                                                                            <a class="dropdown-item" href="#"><a style="margin-left: 45px; color:#0091ae;" href=""> Create Team </a></a>
+                                                                            
+                                                                        </div>
+                                                                        <!--<div class="dropdown-menu" style="line-height: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                                                                          <a class="dropdown-item" href="#">Action</a>
+                                                                          <a class="dropdown-item" href="#">Another action</a>
+                                                                          <a class="dropdown-item" href="#">Something else here</a>
+                                                                        </div>-->
+                                                                      </div>
+                                                                </span>
+                                                            </p> 
+                                                            
+                                                    </td>
+                                                    <!--<td><img src="img1.png" alt="Avatar" style="width:80px;border-radius:50%;"></td>
+                                                    <td><h3>Mukesh Sahu</h3></td>-->
+                                                    <td><div class="dropdown">
+                                                            <a class="btn btn-secondary btn-sm dropdown-toggle" style="color: #506e91;border-radius: 0px; margin-bottom: 35px;border-color:#cbd6e2; background-color:#eaf0f6; margin-left: -50px; padding-left: 13px; padding-right: 13px;font-size: 12px;" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                              Action
+                                                            </a>
+                                                            <div class="dropdown-menu" style="line-height: 2rem;" aria-labelledby="dropdownMenuLink">
+                                                              <a class="dropdown-item disabled" href="#" type="link" data-toggle="tooltip" data-placement="left" title="You must have at least one super admin." >Make Super admin</a>
+                                                              <a class="dropdown-item" href="">Reset Password</a>
+                                                              <a class="dropdown-item disabled" href="#"  type="link" data-toggle="tooltip" data-placement="left" title="You must have at least one super admin.">Remove user</a>
+                                                            </div>
+                                                          </div></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <div class="container">
+                                    <div class="container">
+                                        <div class="container" style="border:2px solid #7fd1de;; padding-top: 6px; padding-left: 19px; background-color: #e5f5f8;">
+                                            <p style="font-size:16px;"><b>This user is a super admin.</b></p>
+                                            <p style="font-size:14px;">Super admins will automatically have access to everything in your account, with the exception of paid user features e.g., Sales Starter or Sales Professional.<span href="">Learn</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+                                
+                                
+                    </div>
+                    <div class="modal-footer fixed-bottom" style="justify-content:flex-start; padding: 1.5rem; position:fixed;">
+                            
+                            <button type="button" style="background-color:#ff7a59; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" style="color:#ff7a59;background-color: white; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" data-dismiss="modal">Cancel</button>
+                    </div>   
+                    
+                    
+                    
+                    
+                </div><!-- modal-content -->
+                
+            </div><!-- modal-dialog -->
+            
+        </div><!-- modal -->
+         <!-- Modal -->
+        <div style="width:0px; overflow: auto;border-radius: 0px;" class="modal right fade" id="myModalM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                <div class="modal-dialog modal-lg" role="document" style="border-radius: 0px;width:700px;">
+                    <div class="modal-content" style="border-radius: 0px;">
+        
+                        <div class="modal-header" style="height:68px;border-radius: 0px;">
+                            <h4 class="modal-title" style="float: left; font-family:Avenir Next W02,Helvetica,Arial,sans-serif; font-weight:700; margin-top:5px; font-size:20px; line-height: normal; margin-left: 21px;"><button style="line-height:1.5rem; font-size:2.5rem; float:right; color: white;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" >&times;</span>
+                              </button><span style="padding-right:456px;"><b>james broad</b></span>
+                            </h4>
+                            
+                        </div>
+                        
+                            
+                        <div class="container" id="modal-body" >
+                                    <table class="model-second" style="width: 100%; border:#fff;">
+                                                <!--<col width="100">
+                                                <col width="450">-->
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <br>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>    
+                                                        <td style="line-height: 8px; margin-left: 8px; padding-top: 5px;">
+                                                                <p style="margin-top: 13px; margin-right: 0px; padding-left: 12px;"><!--<div tabindex="0" style="height: 32px; width: 32px; display: inline-block; text-align: center;" class="tether-target tether-element-attached-bottom tether-element-attached-center tether-target-attached-top tether-target-attached-center">-->
+                                                                                <img alt=""  src="https://api.hubapi.com/hubsettings/v1/avatar/hash/cd664258eaa91fd3a4999521d926e249/64" style="height: 72px; width: 72px; display: inline-block; text-align: center; margin-top: -10px;">
+                                                                    
+                                                                    <span style="margin-left: 10px; margin-top: 0px; padding: 3px; color:#495057; font-size: 24px;">James Broad </span><span style="font-size: 10px; margin-left: 25px; margin-bottom: 20px; padding: 0px; color: #7c98b6;">
+                                                                        <div class="dropdown show" style="margin-left:15px; font-size: 12px; margin-bottom: 20px;">
+                                                                            <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 20px;color: #0091ae; margin-left:13px; margin-top: -7px; font-size: 14px;">
+                                                                              No teams assigned
+                                                                            </a>
+                                                                            <div class="dropdown-menu" style="line-height: 1.5rem;" aria-labelledby="dropdownMenuLink">
+                                                                                <a class="dropdown-item" style="background-color:rgba(0,157,186,.101961);" href="#">No Team assigned</a>
+                                                                                <a class="dropdown-item" href="#"><a style="margin-left: 45px; color:#0091ae;" href=""> Create Team </a></a>
+                                                                                
+                                                                            </div>
+                                                                            
+                                                                          </div>
+                                                                    </span>
+                                                                </p> 
+                                                                
+                                                        </td>
+                                                        <!--<td><img src="img1.png" alt="Avatar" style="width:80px;border-radius:50%;"></td>
+                                                        <td><h3>Mukesh Sahu</h3></td>-->
+                                                        <td><div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle" style="color: #506e91;border-radius: 0px; margin-bottom: 35px;border-color:#cbd6e2; background-color:#eaf0f6; margin-left: -50px; padding-left: 13px; padding-right: 13px;font-size: 12px;" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </a>
+                                                                <div class="dropdown-menu" style="line-height: 2rem;" aria-labelledby="dropdownMenuLink">
+                                                                  <a class="dropdown-item" role="link" data-toggle="modal" data-target="#myModalM" href="#myModalM">Make Super admin</a>
+                                                                  <a class="dropdown-item" href="">Reset Password</a>
+                                                                  <a class="dropdown-item" role="link" data-toggle="modal" data-target="#exampleModal" href="#">Remove Super User</a>
+                                                                </div>
+                                                              </div></td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="container">
+                                        <div class="container">
+                                            <div class="container" style="border:2px solid #7fd1de;; padding-top: 6px; padding-left: 19px; background-color: #e5f5f8;">
+                                                <p style="font-size:16px;"><b>This user is a super admin.</b></p>
+                                                <p style="font-size:14px;">Super admins will automatically have access to everything in your account, with the exception of paid user features e.g., Sales Starter or Sales Professional.<span href="">Learn</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                    
+                                    
+                        </div>
+                        <div class="modal-footer fixed-bottom" style="justify-content:flex-start; padding: 1.5rem; position:fixed;">
+                                
+                                <button type="button" style="background-color:#ff7a59; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary" style="color:#ff7a59;background-color: white; border-color:#ff7a59; padding: 12px 24px; margin-left: 12px; margin-top:6px; line-height: 14px;font-size:14px;" data-dismiss="modal">Cancel</button>
+                        </div>   
+                        
+                        
+                        
+                        
+                    </div><!-- modal-content -->
+                    
+                </div><!-- modal-dialog -->
+                
+            </div><!-- modal -->
+            <!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>-->
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!--<div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>-->
+            <div style="background-color:#ff7a59;" class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>  
+              <h2>Are you sure you want to remove user James?</h2>
+              <p>This will remove them from this account.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary">Yes, I want to remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+        
+        <!--$(document).ready(function() {
+         $("#checkedAll").change(function() {
+             if (this.checked) {
+                 $(".checkSingle").each(function() {
+                     this.checked=true;
+                 });
+             } else {
+                 $(".checkSingle").each(function() {
+                     this.checked=false;
+                 });
+             }
+         });
+     
+         $(".checkSingle").click(function () {
+             if (this.checked) {
+                 var isAllChecked = 0;
+     
+                 $(".checkSingle").each(function() {
+                     if (!this.checked)
+                         isAllChecked = 1;
+                 });
+     
+                 if (isAllChecked == 0) {
+                     $("#checkedAll").prop("checked", true);
+                 }     
+             }
+             else {
+                 $("#checkedAll").prop("checked", false);
+                 
+             }
+         });
+     });
+     var overall = document.querySelector("#checkedAll");
+  var ingredients = document.querySelectorAll(".checkSingle");
+
+  overall.addEventListener('click', function(e) {
+    e.preventDefault();
+  });
+
+  for(var i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('click', updateDisplay);
+  }
+
+  function updateDisplay() {
+    var checkedCount = 1;
+    for(var i = 0; i < ingredients.length; i++) {
+      if(ingredients[i].checked) {
+        checkedCount++;
+      }
+    }
+
+    if(checkedCount === ingredients.length + 1) {
+      overall.checked = true;
+      overall.indeterminate = false;
+    } else if(checkedCount <= ingredients.length + 1 && checkedCount > 1) {
+      overall.checked = false;
+      overall.indeterminate = true;
+    } else {
+      overall.checked = false;
+      overall.indeterminate = false;
+    }
+  }-->
+    <script src="ckb.js" async></script>
+    <script>
+           /*$("#ckb2").click(function(){
+      $("#name").html("Hello");
+      $("#name").css("background-color", "rgba(0,157,186,.101961)");
+});*/
+    </script>
+    <script>
+            
+            $(document).ready(function(){
+			   $('.hover').on('mouseenter', function(){
+			   $(this).css('background-color', 'rgba(0,77,128,.0392157)');
+               });
+               $('.hover').on('mouseleave', function(){
+			   $(this).css('background-color', 'white');
+               });
+               $('.hoverH').on('mouseenter', function(){
+			   $(this).css('background-color', 'rgba(0,157,186,.101961)');
+               });
+               $('.hoverH').on('mouseleave', function(){
+			   $(this).css('background-color', 'rgba(0,77,128,.0392157)');
+		       });
+               $('.hoverN').on('mouseenter', function(){
+			   $(this).css('background-color', 'rgba(0,157,186,.101961)');
+               });
+               $('.hoverN').on('mouseleave', function(){
+			   $(this).css('background-color', 'rgba(0,73,146,.0823529)');
+		       });
+            });    
+    </script>
+</body>
+
+</html>
